@@ -1,0 +1,137 @@
+<html>
+<HEAD>
+<body bgcolor="#00FFFF">
+<script LANGUAGE="JavaScript">
+var ans = new Array;
+var done = new Array;
+var yourAns = new Array;
+var explainAnswer = new Array;
+
+var score = 0;
+ans[1] = "d";
+ans[2] = "d";
+ans[3] = "d";
+ans[4] = "b";
+ans[5] = "c";
+ans[6] = "b";
+ans[7] = "a";
+ans[8] = "a";
+ans[9] = "d";
+ans[10] = "c";
+function Engine(question, answer) {
+yourAns[question]=answer;
+}
+
+function Score()
+{var answerText = "How did you do?\n------------------------------------\n";
+for(i=1;i<=10;i++){
+answerText=answerText+"\nQuestion :"+i+"\n";
+if(ans[i]!=yourAns[i]){
+answerText=answerText+"\nThe correct answer was "+ans[i]+"\n"+explainAnswer[i]+"\n";
+}
+else{
+answerText=answerText+" \nCorrect! \n";
+score++;
+}
+}
+
+answerText=answerText+"\n\nYour total score is : "+score+"\n";
+
+//now score the user
+answerText=answerText+"\nComment : ";
+if(score<=0){
+answerText=answerText+"You need to learn some more, you are very weak in this subject";
+}
+if(score>=1 && score <10){
+answerText=answerText+"bit more practice";
+}
+if(score==10){
+answerText=answerText+"excellent";
+}
+
+alert(answerText);
+
+}
+// End -->
+</script>
+<style>
+            .test
+            {
+                  width: 100px;
+                  height: 50px;
+                  background-color: Silver;
+            }
+            .test:focus
+            {
+                  width: 100px;
+                  height: 50px;
+                  background-color: red;
+            }
+			.test:font
+			{
+			font-size: 60px;
+			}
+      </style>
+
+</HEAD>
+<div id page>
+<center><h1><font size="30"color="#8B0000"bgcolor="red">General Science</font></h1></center><hr>
+<b ><center><font size="5"color="red">Model Test Paper-2</center></font></b><div>
+<hr><hr><br>
+<FORM><div align="center">
+<b><font size="5">1. which of the following pairs has identical dimensional formulae ?</b><br>
+<input type=radio name="q1" value="a" onClick="Engine(1, this.value)">a) momentum and energy<br>
+<input type=radio name="q1" value="b" onClick="Engine(1, this.value)">b) energy and impulse<br>
+<input type=radio name="q1" value="c" onClick="Engine(1, this.value)">c) force and power<br>
+<input type=radio name="q1" value="d" onClick="Engine(1, this.value)">d) momentum and impulse <p>
+<b>2. the tool life of a tool is said to be over if ?</b><br>
+<input type=radio name="q2" value="a" onClick="Engine(2, this.value)">a) a poor surface finished is obtained<br>
+<input type=radio name="q2" value="b" onClick="Engine(2, this.value)">b) sudden increase in power and cutting forces takes place<br>
+<input type=radio name="q2" value="c" onClick="Engine(2, this.value)">c) overheating  and fuming due to friction occurring along with dimensional instability<br>
+<input type=radio name="q2" value="d" onClick="Engine(2, this.value)">d) all of the above <p>
+<b>3. the vernier callipers;s advantage over the micrometer is that?</b><br>
+<input type=radio name="q3" value="a" onClick="Engine(3, this.value)">a) it can be used to mke both inside and outside measurements<br>
+<input type=radio name="q3" value="b" onClick="Engine(3, this.value)">b) it is more accurate<br>
+<input type=radio name="q3" value="c" onClick="Engine(3, this.value)">c) it is easier and quick to use<br>
+<input type=radio name="q3" value="d" onClick="Engine(3, this.value)">d) none of the above   <p>
+<b>4. which of the following is not a drawing process ?</b><br>
+<input type=radio name="q4" value="a" onClick="Engine(4, this.value)">a) tube drawing  <br>
+<input type=radio name="q4" value="b" onClick="Engine(4, this.value)">b) lancing <br>
+<input type=radio name="q4" value="c" onClick="Engine(4, this.value)">c) spinning<br>
+<input type=radio name="q4" value="d" onClick="Engine(4, this.value)">d) embossing<p>
+<b>5. for soldering of brass and copper, the flixed used is?</b><br>
+<input type=radio name="q5" value="a" onClick="Engine(5, this.value)">a) cupric acid<br>
+<input type=radio name="q5" value="b" onClick="Engine(5, this.value)">b) b hydrochloride<br>
+<input type=radio name="q5" value="c" onClick="Engine(5, this.value)">c) zinc chloride  <br>
+<input type=radio name="q5" value="d" onClick="Engine(5, this.value)">d) ammonium chloride<p>
+<b>6. which of the following process is used for cutting and welding non-ferrous metals ?</b><br>
+<input type=radio name="q6" value="a" onClick="Engine(6, this.value)">a) carbon arc welding<br>
+<input type=radio name="q6" value="b" onClick="Engine(6, this.value)">b) inert gas tungsten arc welding <br>
+<input type=radio name="q6" value="c" onClick="Engine(6, this.value)">c) submerged arc welding<br>
+<input type=radio name="q6" value="d" onClick="Engine(6, this.value)">d) metal arc welding<p>
+<b>7. a hexa blade cuts?</b><br>
+<input type=radio name="q7" value="a" onClick="Engine(7, this.value)">a) on stroke, moving forward <br>
+<input type=radio name="q7" value="b" onClick="Engine(7, this.value)">b) on stroke, moving backward <br>
+<input type=radio name="q7" value="c" onClick="Engine(7, this.value)">c) on forward moving and backward moving both the strokes<br>
+<input type=radio name="q7" value="d" onClick="Engine(7, this.value)">d) depends on the direction of the force<p>
+<b>8. the process of making seamless tube is called?</b><br>
+<input type=radio name="q8" value="a" onClick="Engine(8, this.value)">a) piercing <br>
+<input type=radio name="q8" value="b" onClick="Engine(8, this.value)">b) bending<br>
+<input type=radio name="q8" value="c" onClick="Engine(8, this.value)">c) drawing<br>
+<input type=radio name="q8" value="d" onClick="Engine(8, this.value)">d) cupping<p>
+<b>9.  trimming is a process related to ?</b><br>
+<input type=radio name="q9" value="a" onClick="Engine(9, this.value)">a) forging<br>
+<input type=radio name="q9" value="b" onClick="Engine(9, this.value)">b) electroplating<br>
+<input type=radio name="q9" value="c" onClick="Engine(9, this.value)">c) press work<br>
+<input type=radio name="q9" value="d" onClick="Engine(9, this.value)">d) machining of metals<p>
+<b>10. the process of making thin phosphate coating on steel, which works as base or primer for paint and enamel , is called ?</b><br>
+<input type=radio name="q10" value="a" onClick="Engine(10, this.value)">a) anodizing<br>
+<input type=radio name="q10" value="b" onClick="Engine(10, this.value)">b) colourising<br>
+<input type=radio name="q10" value="c" onClick="Engine(10, this.value)">c) parkerising  <br>
+<input type=radio name="q10" value="d" onClick="Engine(10, this.value)">d) none of these<p>
+<CENTER></font>
+<input type=button onClick="Score()" value="Submit"class="test"/></font>
+</CENTER>
+</FORM>
+</DIV> 
+</html>

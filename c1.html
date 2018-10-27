@@ -1,0 +1,137 @@
+<html>
+<HEAD>
+<body bgcolor="#00FFFF">
+<script LANGUAGE="JavaScript">
+var ans = new Array;
+var done = new Array;
+var yourAns = new Array;
+var explainAnswer = new Array;
+
+var score = 0;
+ans[1] = "b";
+ans[2] = "b";
+ans[3] = "a";
+ans[4] = "b";
+ans[5] = "a";
+ans[6] = "b";
+ans[7] = "c";
+ans[8] = "a";
+ans[9] = "a";
+ans[10] = "b";
+
+function Engine(question, answer) {
+yourAns[question]=answer;
+}
+
+function Score()
+{var answerText = "How did you do?\n------------------------------------\n";
+for(i=1;i<=10;i++){
+answerText=answerText+"\nQuestion :"+i+"\n";
+if(ans[i]!=yourAns[i]){
+answerText=answerText+"\nThe correct answer was "+ans[i]+"\n"+explainAnswer[i]+"\n";
+}
+else{
+answerText=answerText+" \nCorrect! \n";
+score++;
+}
+}
+
+answerText=answerText+"\n\nYour total score is : "+score+"\n";
+
+//now score the user
+answerText=answerText+"\nComment : ";
+if(score<=0){
+answerText=answerText+"You need to learn some more, you are very weak in this subject";
+}
+if(score>=1 && score <10){
+answerText=answerText+"bit more practice";
+}
+if(score==10){
+answerText=answerText+"excellent";
+}
+alert(answerText);
+
+}
+// End -->
+</script>
+<style>
+            .test
+            {
+                  width: 100px;
+                  height: 50px;
+                  background-color: Silver;
+            }
+            .test:focus
+            {
+                  width: 100px;
+                  height: 50px;
+                  background-color: red;
+            }
+			.test:font
+			{
+			font-size: 60px;
+			}
+      </style>
+
+</HEAD>
+<div id page>
+<center><h1><font size="30"color="#8B0000"bgcolor="red">Computer</font></h1></center><hr>
+<b ><center><font size="5"color="red">Model Test Paper-1</center></font></b><div>
+<hr><hr><br>
+<FORM><div align="center">
+<b><font size="5">1. Who is Father of Modern Computer?</b><br>
+<input type=radio name="q1" value="a" onClick="Engine(1, this.value)">a) James Watt<br>
+<input type=radio name="q1" value="b" onClick="Engine(1, this.value)">b) Charles Wabbege<br>
+<input type=radio name="q1" value="c" onClick="Engine(1, this.value)">c) Adbard Zenar<br>
+<input type=radio name="q1" value="d" onClick="Engine(1, this.value)">d) James Gosling<p>
+<b>2. What is the fullform HTML ?</b><br>
+<input type=radio name="q2" value="a" onClick="Engine(2, this.value)">a) Hypher Text Making Language<br>
+<input type=radio name="q2" value="b" onClick="Engine(2, this.value)">b) Hypher Text Markup Language<br>
+<input type=radio name="q2" value="c" onClick="Engine(2, this.value)">c) Hell Text Mailing language<br>
+<input type=radio name="q2" value="d" onClick="Engine(2, this.value)">d) Howard Text Markup Languagae<p>
+<b>3. What is a Shortcut key of Copy any document?</b><br>
+<input type=radio name="q3" value="a" onClick="Engine(3, this.value)">a) ctrl+c<br>
+<input type=radio name="q3" value="b" onClick="Engine(3, this.value)">b) alt+c<br>
+<input type=radio name="q3" value="c" onClick="Engine(3, this.value)">c) f2+c<br>
+<input type=radio name="q3" value="d" onClick="Engine(3, this.value)">d) f9+c <p>
+<b>4. What is paste shortcut key ?</b><br>
+<input type=radio name="q4" value="a" onClick="Engine(4, this.value)">a) alt+v<br>
+<input type=radio name="q4" value="b" onClick="Engine(4, this.value)">b) ctrl+v<br>
+<input type=radio name="q4" value="c" onClick="Engine(4, this.value)">c) f10+v<br>
+<input type=radio name="q4" value="d" onClick="Engine(4, this.value)">d) f6+v<p>
+<b>5.What is the fullform of CPU ?</b><br>
+<input type=radio name="q5" value="a" onClick="Engine(5, this.value)">a) Central Processing Unit<br>
+<input type=radio name="q5" value="b" onClick="Engine(5, this.value)">b) Central Programming Unit<br>
+<input type=radio name="q5" value="c" onClick="Engine(5, this.value)">c) Centric Playing Unit<br>
+<input type=radio name="q5" value="d" onClick="Engine(5, this.value)">d) None of thease<p>
+<b>6.What is the Fullform of ALU ?</b><br>
+<input type=radio name="q6" value="a" onClick="Engine(6, this.value)">a) Appendix Logic Unit<br>
+<input type=radio name="q6" value="b" onClick="Engine(6, this.value)">b) Airthmatic Logic Unit<br>
+<input type=radio name="q6" value="c" onClick="Engine(6, this.value)">c) Accumulator Logic Unit<br>
+<input type=radio name="q6" value="d" onClick="Engine(6, this.value)">d) None of thease<p>
+<b>7.What is the decimal conveerson of (10000)<sub>2</sub> ?</b><br>
+<input type=radio name="q7" value="a" onClick="Engine(7, this.value)">a) 14<br>
+<input type=radio name="q7" value="b" onClick="Engine(7, this.value)">b) 15<br>
+<input type=radio name="q7" value="c" onClick="Engine(7, this.value)">c) 16<br>
+<input type=radio name="q7" value="d" onClick="Engine(7, this.value)">d) 17<p>
+<b>8.What is fullform of RAM ?</b><br>
+<input type=radio name="q8" value="a" onClick="Engine(8, this.value)">a) Random Access Memory<br>
+<input type=radio name="q8" value="b" onClick="Engine(8, this.value)">b) Reginal Access Memory<br>
+<input type=radio name="q8" value="c" onClick="Engine(8, this.value)">c) Reliable Access Memory<br>
+<input type=radio name="q8" value="d" onClick="Engine(8, this.value)">d) Random Arrival Memory<p>
+<b>9.What is addition of thease binary number (110011)<sub)2</sub> and (111111)<sub>2</sub> ?</b><br>
+<input type=radio name="q9" value="a" onClick="Engine(9, this.value)">a) (1110010)<sub>2</sub><br>
+<input type=radio name="q9" value="b" onClick="Engine(9, this.value)">b) (1111010)<sub>2</sub><br>
+<input type=radio name="q9" value="c" onClick="Engine(9, this.value)">c) (1111010)<sub>2</sub><br>
+<input type=radio name="q9" value="d" onClick="Engine(9, this.value)">d) (1110011)<sub>2</sub><p>
+<b>10.What is the extension of nodepad file ?</b><br>
+<input type=radio name="q10" value="a" onClick="Engine(10, this.value)">a) .doc<br>
+<input type=radio name="q10" value="b" onClick="Engine(10, this.value)">b) .txt<br>
+<input type=radio name="q10" value="c" onClick="Engine(10, this.value)">c) .ppt<br>
+<input type=radio name="q10" value="d" onClick="Engine(10, this.value)">d) .msdb<p>
+<CENTER></font>
+<input type=button onClick="Score()" value="Submit"class="test"/></font>
+</CENTER>
+</FORM>
+</DIV> 
+</html>

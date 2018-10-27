@@ -1,0 +1,137 @@
+<html>
+<HEAD>
+<body bgcolor="#00FFFF">
+<script LANGUAGE="JavaScript">
+var ans = new Array;
+var done = new Array;
+var yourAns = new Array;
+var explainAnswer = new Array;
+
+var score = 0;
+ans[1] = "d";
+ans[2] = "b";
+ans[3] = "a";
+ans[4] = "a";
+ans[5] = "b";
+ans[6] = "b";
+ans[7] = "a";
+ans[8] = "a";
+ans[9] = "c";
+ans[10] = "a";
+function Engine(question, answer) {
+yourAns[question]=answer;
+}
+
+function Score()
+{var answerText = "How did you do?\n------------------------------------\n";
+for(i=1;i<=10;i++){
+answerText=answerText+"\nQuestion :"+i+"\n";
+if(ans[i]!=yourAns[i]){
+answerText=answerText+"\nThe correct answer was "+ans[i]+"\n"+explainAnswer[i]+"\n";
+}
+else{
+answerText=answerText+" \nCorrect! \n";
+score++;
+}
+}
+
+answerText=answerText+"\n\nYour total score is : "+score+"\n";
+
+//now score the user
+answerText=answerText+"\nComment : ";
+if(score<=0){
+answerText=answerText+"You need to learn some more, you are very weak in this subject";
+}
+if(score>=1 && score <10){
+answerText=answerText+"bit more practice";
+}
+if(score==10){
+answerText=answerText+"excellent";
+}
+
+alert(answerText);
+
+}
+// End -->
+</script>
+<style>
+            .test
+            {
+                  width: 100px;
+                  height: 50px;
+                  background-color: Silver;
+            }
+            .test:focus
+            {
+                  width: 100px;
+                  height: 50px;
+                  background-color: red;
+            }
+			.test:font
+			{
+			font-size: 60px;
+			}
+      </style>
+
+</HEAD>
+<div id page>
+<center><h1><font size="30"color="#8B0000"bgcolor="red">General Science</font></h1></center><hr>
+<b ><center><font size="5"color="red">Model Test Paper-1</center></font></b><div>
+<hr><hr><br>
+<FORM><div align="center">
+<b><font size="5">1.  the graph of the length of the pendulum and time-period will be</b><br>
+<input type=radio name="q1" value="a" onClick="Engine(1, this.value)">a) hyperbola<br>
+<input type=radio name="q1" value="b" onClick="Engine(1, this.value)">b) circle<br>
+<input type=radio name="q1" value="c" onClick="Engine(1, this.value)">c) straight line<br>
+<input type=radio name="q1" value="d" onClick="Engine(1, this.value)">d) parabola<p>
+<b>2. if a ray of light enters water from air, its ?</b><br>
+<input type=radio name="q2" value="a" onClick="Engine(2, this.value)">a) wavelength increases<br>
+<input type=radio name="q2" value="b" onClick="Engine(2, this.value)">b) wavelength decreases <br>
+<input type=radio name="q2" value="c" onClick="Engine(2, this.value)">c) frequency decreases<br>
+<input type=radio name="q2" value="d" onClick="Engine(2, this.value)">d) neither wavelength nor frequency changes<p>
+<b>3. the velocity of sound inair is not affected by?</b><br>
+<input type=radio name="q3" value="a" onClick="Engine(3, this.value)">a) increase in the pressure of air <br>
+<input type=radio name="q3" value="b" onClick="Engine(3, this.value)">b) the composition of air<br>
+<input type=radio name="q3" value="c" onClick="Engine(3, this.value)">c) increase in temperature of air<br>
+<input type=radio name="q3" value="d" onClick="Engine(3, this.value)">d) increase in    moisture content of air <p>
+<b>4. the kintic energy of a molecule is minimum in ?</b><br>
+<input type=radio name="q4" value="a" onClick="Engine(4, this.value)">a)  gas <br>
+<input type=radio name="q4" value="b" onClick="Engine(4, this.value)">b) liquid<br>
+<input type=radio name="q4" value="c" onClick="Engine(4, this.value)">c) solid<br>
+<input type=radio name="q4" value="d" onClick="Engine(4, this.value)">d) same in all the three states<p>
+<b>5. high temperatures are measured using?</b><br>
+<input type=radio name="q5" value="a" onClick="Engine(5, this.value)">a) thermometer <br>
+<input type=radio name="q5" value="b" onClick="Engine(5, this.value)">b) pyrometer  <br>
+<input type=radio name="q5" value="c" onClick="Engine(5, this.value)">c) thermocouple <br>
+<input type=radio name="q5" value="d" onClick="Engine(5, this.value)">d) thermister<p>
+<b>6. radition is better  absorbed by?</b><br>
+<input type=radio name="q6" value="a" onClick="Engine(6, this.value)">a) bright black surface<br>
+<input type=radio name="q6" value="b" onClick="Engine(6, this.value)">b) rough black surface  <br>
+<input type=radio name="q6" value="c" onClick="Engine(6, this.value)">c) rough polished surface<br>
+<input type=radio name="q6" value="d" onClick="Engine(6, this.value)">d) bright polished surface<p>
+<b>7. diode function as a?</b><br>
+<input type=radio name="q7" value="a" onClick="Engine(7, this.value)">a) rectifier <br>
+<input type=radio name="q7" value="b" onClick="Engine(7, this.value)">b) amplifier<br>
+<input type=radio name="q7" value="c" onClick="Engine(7, this.value)">c) c condenser  <br>
+<input type=radio name="q7" value="d" onClick="Engine(7, this.value)">d) none of these<p>
+<b>8. electric current does not flow in insulators, because?</b><br>
+<input type=radio name="q8" value="a" onClick="Engine(8, this.value)">a) there are no free electrons in them  <br>
+<input type=radio name="q8" value="b" onClick="Engine(8, this.value)">b) there are no ions in them<br>
+<input type=radio name="q8" value="c" onClick="Engine(8, this.value)">c) they do no passess any electron<br>
+<input type=radio name="q8" value="d" onClick="Engine(8, this.value)">d) none of these<p>
+<b>9. hotwire ammeter can measure?</b><br>
+<input type=radio name="q9" value="a" onClick="Engine(9, this.value)">a) only dc current<br>
+<input type=radio name="q9" value="b" onClick="Engine(9, this.value)">b) only ac current<br>
+<input type=radio name="q9" value="c" onClick="Engine(9, this.value)">c) ac and dc both the currents   <br>
+<input type=radio name="q9" value="d" onClick="Engine(9, this.value)">d) none of the above<p>
+<b>10.  T is time-period of the vertical oscillation of masss m attached to a spring. The time-period become four times,if an extra mass M is attached to the massm. The ratio M/m will be ?</b><br>
+<input type=radio name="q10" value="a" onClick="Engine(10, this.value)">a) 1/5    <br>
+<input type=radio name="q10" value="b" onClick="Engine(10, this.value)">b) 1/3<br>
+<input type=radio name="q10" value="c" onClick="Engine(10, this.value)">c) 15 <br>
+<input type=radio name="q10" value="d" onClick="Engine(10, this.value)">d) 3<p>
+<CENTER></font>
+<input type=button onClick="Score()" value="Submit"class="test"/></font>
+</CENTER>
+</FORM>
+</DIV> 
+</html>

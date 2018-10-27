@@ -1,0 +1,137 @@
+<html>
+<HEAD>
+<body bgcolor="#00FFFF">
+<script LANGUAGE="JavaScript">
+var ans = new Array;
+var done = new Array;
+var yourAns = new Array;
+var explainAnswer = new Array;
+
+var score = 0;
+ans[1] = "a";
+ans[2] = "b";
+ans[3] = "a";
+ans[4] = "c";
+ans[5] = "c";
+ans[6] = "c";
+ans[7] = "a";
+ans[8] = "c";
+ans[9] = "c";
+ans[10] = "c";
+function Engine(question, answer) {
+yourAns[question]=answer;
+}
+
+function Score()
+{var answerText = "How did you do?\n------------------------------------\n";
+for(i=1;i<=10;i++){
+answerText=answerText+"\nQuestion :"+i+"\n";
+if(ans[i]!=yourAns[i]){
+answerText=answerText+"\nThe correct answer was "+ans[i]+"\n"+explainAnswer[i]+"\n";
+}
+else{
+answerText=answerText+" \nCorrect! \n";
+score++;
+}
+}
+
+answerText=answerText+"\n\nYour total score is : "+score+"\n";
+
+//now score the user
+answerText=answerText+"\nComment : ";
+if(score<=0){
+answerText=answerText+"You need to learn some more, you are very weak in this subject";
+}
+if(score>=1 && score <10){
+answerText=answerText+"bit more practice";
+}
+if(score==10){
+answerText=answerText+"excellent";
+}
+alert(answerText);
+
+}
+// End -->
+</script>
+<style>
+            .test
+            {
+                  width: 100px;
+                  height: 50px;
+                  background-color: Silver;
+            }
+            .test:focus
+            {
+                  width: 100px;
+                  height: 50px;
+                  background-color: red;
+            }
+			.test:font
+			{
+			font-size: 60px;
+			}
+      </style>
+
+</HEAD>
+<div id page>
+<center><h1><font size="30"color="#8B0000"bgcolor="red">English</font></h1></center><hr>
+<b ><center><font size="5"color="red">Model Test Paper-1</center></font></b><div>
+<hr><hr><br>
+<FORM><div align="center">
+<b><font size="5">In the following questions out of the four alternatives. Choose the one which best express the meaning of the given word and mark it in the answer sheet.</b><br>
+<b><font size="5">1. UGLY?</b><br>
+<input type=radio name="q1" value="a" onClick="Engine(1, this.value)">a) REPULSINEV<br>
+<input type=radio name="q1" value="b" onClick="Engine(1, this.value)">b) EVILSOME<br>
+<input type=radio name="q1" value="c" onClick="Engine(1, this.value)">c)  HATEFUL<br>
+<input type=radio name="q1" value="d" onClick="Engine(1, this.value)">d) FEARFUL<p>
+<b>2. GRAND?</b><br>
+<input type=radio name="q2" value="a" onClick="Engine(2, this.value)">a) GREAT<br>
+<input type=radio name="q2" value="b" onClick="Engine(2, this.value)">b) SPLENDED<br>
+<input type=radio name="q2" value="c" onClick="Engine(2, this.value)">c) NOBLE<br>
+<input type=radio name="q2" value="d" onClick="Engine(2, this.value)">d) ARISTOCRATIC<p>
+<b>3. CAUTIOUSLY?</b><br>
+<input type=radio name="q3" value="a" onClick="Engine(3, this.value)">a) CAREFULLY<br>
+<input type=radio name="q3" value="b" onClick="Engine(3, this.value)">b) GENUINLY<br>
+<input type=radio name="q3" value="c" onClick="Engine(3, this.value)">c) SECRETLY<br>
+<input type=radio name="q3" value="d" onClick="Engine(3, this.value)">d)  SOMEWHAT<p>
+<b>4. RELUCTANT ?</b><br>
+<input type=radio name="q4" value="a" onClick="Engine(4, this.value)">a) INCLIENT<br>
+<input type=radio name="q4" value="b" onClick="Engine(4, this.value)">b) WORRIED<br>
+<input type=radio name="q4" value="c" onClick="Engine(4, this.value)">c) UNWILLING<br>
+<input type=radio name="q4" value="d" onClick="Engine(4, this.value)">d) READY<p>
+<b>5.  FALSE?</b><br>
+<input type=radio name="q5" value="a" onClick="Engine(5, this.value)">a) INACURATE<br>
+<input type=radio name="q5" value="b" onClick="Engine(5, this.value)">b) INCORRECT<br>
+<input type=radio name="q5" value="c" onClick="Engine(5, this.value)">c)  UNTRUE<br>
+<input type=radio name="q5" value="d" onClick="Engine(5, this.value)">d) DEFECTIVE<p>
+<b>6. SIGNIFICANT?</b><br>
+<input type=radio name="q6" value="a" onClick="Engine(6, this.value)">a) CONSTANT<br>
+<input type=radio name="q6" value="b" onClick="Engine(6, this.value)">b) DEGENERATE<br>
+<input type=radio name="q6" value="c" onClick="Engine(6, this.value)">c) IMPORTANT<br>
+<input type=radio name="q6" value="d" onClick="Engine(6, this.value)">d)  MAJORITY<p>
+<b>7. OCULAR?</b><br>
+<input type=radio name="q7" value="a" onClick="Engine(7, this.value)">a)  VISUAL<br>
+<input type=radio name="q7" value="b" onClick="Engine(7, this.value)">b) UNEXPECTED <br>
+<input type=radio name="q7" value="c" onClick="Engine(7, this.value)">c) IMAGIONARY<br>
+<input type=radio name="q7" value="d" onClick="Engine(7, this.value)">d) CONTINUAL<p>
+<b>8. AMAZEMENT?</b><br>
+<input type=radio name="q8" value="a" onClick="Engine(8, this.value)">a) ENJOYMENT<br>
+<input type=radio name="q8" value="b" onClick="Engine(8, this.value)">b) AMUSEMMENT<br>
+<input type=radio name="q8" value="c" onClick="Engine(8, this.value)">c)  ASTONISHMENT<br>
+<input type=radio name="q8" value="d" onClick="Engine(8, this.value)">d) ILLUSION<p>
+<b>9. ORDINARY?</b><br>
+<input type=radio name="q9" value="a" onClick="Engine(9, this.value)">a) PRIMARY<br>
+<input type=radio name="q9" value="b" onClick="Engine(9, this.value)">b) UNNESSSERY<br>
+<input type=radio name="q9" value="c" onClick="Engine(9, this.value)">c) NORMAL<br>
+<input type=radio name="q9" value="d" onClick="Engine(9, this.value)">d) WEAK<p>
+<b>10.  OUTCOME?</b><br>
+<input type=radio name="q10" value="a" onClick="Engine(10, this.value)">a)  PRODUCTION<br>
+<input type=radio name="q10" value="b" onClick="Engine(10, this.value)">b)  EXPLODE<br>
+<input type=radio name="q10" value="c" onClick="Engine(10, this.value)">c)  RESULT<br>
+<input type=radio name="q10" value="d" onClick="Engine(10, this.value)">d) GROWTH<p>
+<CENTER></font>
+<input type=button onClick="Score()" value="Submit"class="test"/></font>
+</CENTER>
+</FORM>
+</DIV> 
+</html>

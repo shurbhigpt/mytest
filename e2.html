@@ -1,0 +1,137 @@
+<html>
+<HEAD>
+<body bgcolor="#00FFFF">
+<script LANGUAGE="JavaScript">
+var ans = new Array;
+var done = new Array;
+var yourAns = new Array;
+var explainAnswer = new Array;
+
+var score = 0;
+ans[1] = "b";
+ans[2] = "b";
+ans[3] = "c";
+ans[4] = "c";
+ans[5] = "c";
+ans[6] = "b";
+ans[7] = "d";
+ans[8] = "b";
+ans[9] = "c";
+ans[10] = "a";
+function Engine(question, answer) {
+yourAns[question]=answer;
+}
+
+function Score()
+{var answerText = "How did you do?\n------------------------------------\n";
+for(i=1;i<=10;i++){
+answerText=answerText+"\nQuestion :"+i+"\n";
+if(ans[i]!=yourAns[i]){
+answerText=answerText+"\nThe correct answer was "+ans[i]+"\n"+explainAnswer[i]+"\n";
+}
+else{
+answerText=answerText+" \nCorrect! \n";
+score++;
+}
+}
+
+answerText=answerText+"\n\nYour total score is : "+score+"\n";
+
+//now score the user
+answerText=answerText+"\nComment : ";
+if(score<=0){
+answerText=answerText+"You need to learn some more, you are very weak in this subject";
+}
+if(score>=1 && score <10){
+answerText=answerText+"bit more practice";
+}
+if(score==10){
+answerText=answerText+"excellent";
+}
+alert(answerText);
+
+}
+// End -->
+</script>
+<style>
+            .test
+            {
+                  width: 100px;
+                  height: 50px;
+                  background-color: Silver;
+            }
+            .test:focus
+            {
+                  width: 100px;
+                  height: 50px;
+                  background-color: red;
+            }
+			.test:font
+			{
+			font-size: 60px;
+			}
+      </style>
+
+</HEAD>
+<div id page>
+<center><h1><font size="30"color="#8B0000"bgcolor="red">English</font></h1></center><hr>
+<b ><center><font size="5"color="red">Model Test Paper-2</center></font></b><div>
+<hr><hr><br>
+<FORM><div align="center">
+<b><font size="5">below are given some words followed by four words numbered a, b, c, d select and make the appropriate word that is opposite in meaning to the word.</b><br>
+<b><font size="5">1. lucid?</b><br>
+<input type=radio name="q1" value="a" onClick="Engine(1, this.value)">a) clear<br>
+<input type=radio name="q1" value="b" onClick="Engine(1, this.value)">b) hazy<br>
+<input type=radio name="q1" value="c" onClick="Engine(1, this.value)">c) complete<br>
+<input type=radio name="q1" value="d" onClick="Engine(1, this.value)">d) unfinished<p>
+<b>2. compulsory?</b><br>
+<input type=radio name="q2" value="a" onClick="Engine(2, this.value)">a) obligatory<br>
+<input type=radio name="q2" value="b" onClick="Engine(2, this.value)">b) optional<br>
+<input type=radio name="q2" value="c" onClick="Engine(2, this.value)">c) optimal<br>
+<input type=radio name="q2" value="d" onClick="Engine(2, this.value)">d) optimum<p>
+<b>3. sage?</b><br>
+<input type=radio name="q3" value="a" onClick="Engine(3, this.value)">a) snob<br>
+<input type=radio name="q3" value="b" onClick="Engine(3, this.value)">b) egotist<br>
+<input type=radio name="q3" value="c" onClick="Engine(3, this.value)">c) fool<br>
+<input type=radio name="q3" value="d" onClick="Engine(3, this.value)">d) rogue<p>
+<b>4. moist?</b><br>
+<input type=radio name="q4" value="a" onClick="Engine(4, this.value)">a) crisp<br>
+<input type=radio name="q4" value="b" onClick="Engine(4, this.value)">b) hard<br>
+<input type=radio name="q4" value="c" onClick="Engine(4, this.value)">c) dry<br>
+<input type=radio name="q4" value="d" onClick="Engine(4, this.value)">d) parched<p>
+<b>5. mask?</b><br>
+<input type=radio name="q5" value="a" onClick="Engine(5, this.value)">a) hit<br>
+<input type=radio name="q5" value="b" onClick="Engine(5, this.value)">b) expose<br>
+<input type=radio name="q5" value="c" onClick="Engine(5, this.value)">c) injure<br>
+<input type=radio name="q5" value="d" onClick="Engine(5, this.value)">d) deface<p>
+<b>6. callous?</b><br>
+<input type=radio name="q6" value="a" onClick="Engine(6, this.value)">a) capable<br>
+<input type=radio name="q6" value="b" onClick="Engine(6, this.value)">b) sensitive<br>
+<input type=radio name="q6" value="c" onClick="Engine(6, this.value)">c) sentimental<br>
+<input type=radio name="q6" value="d" onClick="Engine(6, this.value)">d) confident<p>
+<b>7. beguile?</b><br>
+<input type=radio name="q7" value="a" onClick="Engine(7, this.value)">a) flatter<br>
+<input type=radio name="q7" value="b" onClick="Engine(7, this.value)">b) smile8<br>
+<input type=radio name="q7" value="c" onClick="Engine(7, this.value)">c) cheat<br>
+<input type=radio name="q7" value="d" onClick="Engine(7, this.value)">d) persuite<p>
+<b>8. vague?</b><br>
+<input type=radio name="q8" value="a" onClick="Engine(8, this.value)">a) definite<br>
+<input type=radio name="q8" value="b" onClick="Engine(8, this.value)">b) clear<br>
+<input type=radio name="q8" value="c" onClick="Engine(8, this.value)">c) certain<br>
+<input type=radio name="q8" value="d" onClick="Engine(8, this.value)">d) fade<p>
+<b>9. remember?</b><br>
+<input type=radio name="q9" value="a" onClick="Engine(9, this.value)">a) get<br>
+<input type=radio name="q9" value="b" onClick="Engine(9, this.value)">b) fear<br>
+<input type=radio name="q9" value="c" onClick="Engine(9, this.value)">c) forget<br>
+<input type=radio name="q9" value="d" onClick="Engine(9, this.value)">d) forward<p>
+<b>10. virtue?</b><br>
+<input type=radio name="q10" value="a" onClick="Engine(10, this.value)">a) vice<br>
+<input type=radio name="q10" value="b" onClick="Engine(10, this.value)">b) wickedness<br>
+<input type=radio name="q10" value="c" onClick="Engine(10, this.value)">c) mischief<br>
+<input type=radio name="q10" value="d" onClick="Engine(10, this.value)">d) crime<p>
+<CENTER></font>
+<input type=button onClick="Score()" value="Submit"class="test"/></font>
+</CENTER>
+</FORM>
+</DIV> 
+</html>

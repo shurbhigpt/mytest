@@ -1,0 +1,66 @@
+<html>
+<HEAD>
+
+<script LANGUAGE="JavaScript">tday = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+    tmonth = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+
+    function GetClock() {
+        d = new Date();
+        nday = d.getDay();
+        nmonth = d.getMonth();
+        ndate = d.getDate();
+        nyear = d.getYear();
+        if (nyear < 1000) nyear = nyear + 1900;
+
+
+        document.getElementById('clockbox').innerHTML = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + "";
+        setTimeout("GetClock()", 1000);
+    }
+    window.onload = GetClock;
+</script>
+
+
+
+<script type="text/javascript">
+
+    function GetTime() {
+        c = new Date();
+        zday = c.getDay();
+        zmonth = c.getMonth();
+        zdate = c.getDate();
+        zyear = c.getYear();
+        zhour = c.getHours();
+        zmin = c.getMinutes();
+        if (zyear < 1000) zyear = zyear + 1900;
+
+        if (zhour == 0) { zp = " AM"; zhour = 12; }
+        else if (zhour <= 11) { zp = " AM"; }
+        else if (zhour == 12) { zp = " PM"; }
+        else if (zhour >= 13) { zp = " PM"; zhour -= 12; }
+
+        if (zmin <= 9) { zmin = "0" + zmin; }
+
+        document.getElementById('timebox').innerHTML = "" + (zmonth + 1) + "/" + zdate + "/" + zyear + " " + zhour + ":" + zmin + zp + "";
+        setTimeout("GetTime()", 1000);
+    }
+    window.onload = GetTime;
+</script>
+
+<script>setTimeout("document.mbcsr43.submit()", 15000);</script>
+<script language="javascript">
+countdown = 1630; // initial value in seconds
+function dotimer() {
+ countdown--;
+ if (countdown > 0) {
+  setTimeout("dotimer()", 1000);
+ }
+ document.getElementById('madblankstimer').innerHTML = countdown;
+}
+dotimer();
+</script>
+<body bgcolor="#99FF99" height="200px">
+<center><div id="clockbox" class="date_holder_splash"></div></center>
+<div id="timebox" class="time_holder_splash"></div><p><font size="5">Time left to submit: <span id="madblankstimer"></span> sec left</p></font>
+<DIV ALIGN="CENTER" >
+			<h1 style= "font-size:46px"><font color="#8A2BE2">Online test </h1></font>
+	</body>		</html>
